@@ -31,8 +31,8 @@ client.get('favorites/list', params, function(error, tweets) {
         }
     }
 
-    for (let a = 0; a < 150; a++) {
-        let filename = link[a].replace(/[^a-zA-Z0-9\.]+/g, '_')
-        request.get(link[a]).pipe(fs.createWriteStream(filename))
+    for (let j = 0; j < 150; j++) {
+        let filename = link[j].replace(/[^a-zA-Z0-9\.]+/g, '_')
+        request.get(link[j]).pipe(fs.createWriteStream(filename))
     }
 })
