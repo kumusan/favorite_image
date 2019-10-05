@@ -25,7 +25,6 @@ client.get('favorites/list', params, function(error, tweets) {
         try {
             for (let k = 0; k < tweets[i].extended_entities.media.length; k++) {
                 link.push(tweets[i].extended_entities.media[k].media_url)
-                console.log(k)
             }
         } catch (e) {
             console.log(`${e} --- not media or out of range`)
